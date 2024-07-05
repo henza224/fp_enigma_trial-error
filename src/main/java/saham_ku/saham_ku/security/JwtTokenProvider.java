@@ -44,5 +44,29 @@ public class JwtTokenProvider {
                 .compact();
     }
 
+<<<<<<< HEAD
 }
 
+=======
+    public String getUsernameFromJWT(String token){
+        Claims claims = parserBuilder()
+                .setSigningKey(key)
+                .build()
+                .parseClaimsJws(token)
+                .getBody();
+        return claims.getSubject();
+    }
+
+    public boolean validateToken(String token){
+        try{
+            Jwts.parserBuilder().setSigningKey(key).build().parseClaimsJws(token);
+            return true;
+
+        }catch (JwtException | IllegalArgumentException e){
+            return false;
+        }
+    }
+}
+
+
+>>>>>>> 7c0e95d5b695bae0b357b8f75a4f46215c0def43
