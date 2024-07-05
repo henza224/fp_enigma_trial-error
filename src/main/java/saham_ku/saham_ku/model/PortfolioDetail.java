@@ -1,4 +1,4 @@
-package project.saham_ku.model;
+package saham_ku.saham_ku.model;
 
 import jakarta.persistence.*;
 import lombok.*;
