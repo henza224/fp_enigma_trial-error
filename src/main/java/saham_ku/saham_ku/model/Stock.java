@@ -4,17 +4,20 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "users")
-@AllArgsConstructor
+@Table(name = "stocks")
 @NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
 @Builder
-public class User {
+
+public class Stock {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String username;
-    private String password;
-    private Integer balance;
+    private String name;
+    private String code;
+    private Integer price;
 }
+
+
