@@ -1,0 +1,5 @@
+SHOW DATABASES ;
+
+CREATE DATABASE saham_ku;
+
+USE saham_ku;
